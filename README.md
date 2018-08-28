@@ -36,3 +36,5 @@ Example
 ```html
 <div data-parallax="0.2, -0.2"></div>
 ```
+
+TIP: try it with css transitions tue create nicer effect.
