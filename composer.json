@@ -1,0 +1,21 @@
+{
+    "name": "dmstr/yii2-parallax-asset",
+    "description": "A vanilla javascript library to create AWESOME parallax effects.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"," parallax"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "German Bisurgi",
+            "email": "g.bisurgi@herzogkommunikation.de"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "dmstr\\parallax\\": "./src"
+        }
+    }
+}
