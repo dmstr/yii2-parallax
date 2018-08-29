@@ -45,3 +45,11 @@ Example with 3 parallax elements
 * TIP: try it with css transitions on transform to create nicer effect.
 * TIP: to make realistic parallax effects, closer (alsor bigger) elements should
 move faster than elements tha are farther (also smaller).
+
+Example widget usage
+
+```php
+<?php Parallax::begin(['x' => 0.1, 'y' => -0.2]); ?>
+    ... some content
+<?php Parallax::end(); ?>
+```
