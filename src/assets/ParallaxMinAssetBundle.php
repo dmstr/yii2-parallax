@@ -6,8 +6,13 @@
  * Time: 14:34
  */
 
-namespace dmstr\parallax;
+namespace dmstr\parallax\assets;
 
+/**
+ * Class ParallaxMinAssetBundle
+ * @package dmstr\parallax\assets
+ * @author Elias Luhr <e.luhr@herzogkommunikation.de>
+ */
 class ParallaxMinAssetBundle extends ParallaxAssetBundle
 {
     public $js = [

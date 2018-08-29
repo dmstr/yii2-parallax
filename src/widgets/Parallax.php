@@ -10,7 +10,7 @@
 namespace dmstr\parallax\widgets;
 
 use dmstr\helpers\Html;
-use dmstr\parallax\ParallaxAssetBundle;
+use dmstr\parallax\assets\ParallaxAssetBundle;
 use yii\base\Widget;
 
 /**
