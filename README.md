@@ -50,6 +50,6 @@ Example widget usage
 
 ```php
 <?php Parallax::begin(['x' => 0.1, 'y' => -0.2]); ?>
-    ... some content
+<?= '... some content' ?>
 <?php Parallax::end(); ?>
 ```
