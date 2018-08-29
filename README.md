@@ -43,5 +43,5 @@ Example with 3 parallax elements
 ```
 
 * TIP: try it with css transitions to create nicer effect.
-* TIP: to make a realistic parallax move closer (alsor bigger) elements faster than
-elements tha are farther (also smaller).
+* TIP: to make realistic parallax effects, closer (alsor bigger) elements should
+move faster than elements tha are farther (also smaller).
