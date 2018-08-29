@@ -1,6 +1,6 @@
 {
-    "name": "dmstr/yii2-parallax-asset",
-    "description": "A vanilla javascript library to create AWESOME parallax effects.",
+    "name": "dmstr/yii2-parallax",
+    "description": "An extention to create AWESOME parallax effects.",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"," parallax"],
     "license": "MIT",

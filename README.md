@@ -1,6 +1,6 @@
-Yii2 Parallax Asset
+Yii2 Parallax
 ===================
-A vanilla javascript library to create AWESOME parallax effects.
+An extention to create AWESOME parallax effects.
 
 Installation
 ------------
@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist dmstr/yii2-parallax-asset "*"
+composer require --prefer-dist dmstr/yii2-parallax "*"
 ```
 
 or add
 
 ```
-"dmstr/yii2-parallax-asset": "*"
+"dmstr/yii2-parallax": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -28,7 +28,7 @@ Usage
 1. Register desired asset bundle in view
 2. Set the x and y  to define direction and velocity. An extra optional parameter
 (when) tells the element when it should start moving. use "asap" to move the element
-as soon as the scroll evevent fires. Use visible (default value) for those elements
+as soon as the scroll event fires. Use visible (default value) for those elements
 that should move as soon they are visible in the viewport.
 3. Scroll to see the AWESOME effect.
 
@@ -42,6 +42,6 @@ Example with 3 parallax elements
 <div data-parallax="0.2, -0.2"></div>
 ```
 
-* TIP: try it with css transitions to create nicer effect.
+* TIP: try it with css transitions on transform to create nicer effect.
 * TIP: to make realistic parallax effects, closer (alsor bigger) elements should
 move faster than elements tha are farther (also smaller).
