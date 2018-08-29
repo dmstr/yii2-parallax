@@ -3,16 +3,21 @@
  */
 window.requestParallaxFrame = function () {
   return (
-    window.requestAnimationFrame ||
+    window.requestAnimationFrame       ||
     window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.oRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
+    window.mozRequestAnimationFrame    ||
+    window.oRequestAnimationFrame      ||
+    window.msRequestAnimationFrame     ||
     function (callback) {
       window.setTimeout(callback, 1000 / 60);
     }
   );
 }();
+
+var inViewport = function (e) {
+  var rect = e.getBoundingClientRect();
+  return (rect.top + rect.height >= 0 && rect.bottom - rect.height <= window.innerHeight);
+}
 
 window.addEventListener('load', function () {
   var elements = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
@@ -20,11 +25,14 @@ window.addEventListener('load', function () {
     window.requestParallaxFrame(function () {
       var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
       elements.forEach(function (e) {
-        var attributes = e.getAttribute('data-parallax').split(',');
+        var attributes = e.getAttribute('data-parallax').replace(/\s/g,'').split(',');
         var x = Number(attributes[0]) || 0;
         var y = Number(attributes[1]) || 0;
-        var move = (scrollTop - e.offsetTop + window.innerHeight);
-        e.setAttribute('style', '-webkit-transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px); -ms-transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px); transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px);');
+        var when = attributes[2] || 'visible';
+        var move = when === 'asap' ? scrollTop : (scrollTop - e.offsetTop + window.innerHeight);
+        if (inViewport(e)) {
+          e.setAttribute('style', '-webkit-transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px); -ms-transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px); transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px);');
+        }
       });
     });
   });
