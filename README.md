@@ -42,6 +42,6 @@ Example with 3 parallax elements
 <div data-parallax="0.2, -0.2"></div>
 ```
 
-TIP: try it with css transitions to create nicer effect.
-TIP: to make a realistic parallax move closer (alsor bigger) elements faster than
-elements tha are farther (also smaller)
+* TIP: try it with css transitions to create nicer effect.
+* TIP: to make a realistic parallax move closer (alsor bigger) elements faster than
+elements tha are farther (also smaller).
