@@ -17,7 +17,7 @@ window.requestParallaxFrame = function () {
 var inViewport = function (e) {
   var rect = e.getBoundingClientRect();
   return (rect.top + rect.height >= 0 && rect.bottom - rect.height <= window.innerHeight);
-}
+};
 
 window.addEventListener('load', function () {
   var elements = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
@@ -31,7 +31,7 @@ window.addEventListener('load', function () {
         var when = attributes[2] || 'visible';
         var move = when === 'asap' ? scrollTop : (scrollTop - e.offsetTop + window.innerHeight);
         if (inViewport(e)) {
-          e.setAttribute('style', '-webkit-transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px); -ms-transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px); transform: translate(' + Math.floor(move * x) + 'px, ' + Math.floor(move * y) + 'px);');
+          e.setAttribute('style', '-webkit-transform: translate(' + move * x + 'px, ' + move * y + 'px); -ms-transform: translate(' + move * x + 'px, ' + move * y + 'px); transform: translate(' + move * x + 'px, ' + move * y + 'px);');
         }
       });
     });
