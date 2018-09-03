@@ -27,9 +27,9 @@ Usage
 
 1. Register desired asset bundle in view
 2. Set the x and y  to define direction and velocity. An extra optional parameter
-(when) tells the element when it should start moving. use "asap" to move the element
-as soon as the scroll event fires. Use visible (default value) for those elements
-that should move as soon they are visible in the viewport.
+(startCondition) tells the element when it should start moving. use "asap" to move the element
+as soon as the scroll event fires. Use "visible" (default value) for those elements
+that should move as soon they become visible in the viewport.
 3. Scroll to see the AWESOME effect.
 
 [data-parallax="{x}, {y}, {when}"]
@@ -49,7 +49,7 @@ move faster than elements tha are farther (also smaller).
 Example widget usage
 
 ```php
-<?php Parallax::begin(['x' => 0.1, 'y' => -0.2]); ?>
+<?php Parallax::begin(['x' => 0.1, 'y' => -0.2, , 'startCondition' => 'visible']); ?>
 <?= '... some content' ?>
 <?php Parallax::end(); ?>
 ```
