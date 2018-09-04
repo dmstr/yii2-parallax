@@ -20,7 +20,6 @@ var inViewport = function (rect) {
 
 window.addEventListener('load', function () {
   var elements = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
-  console.log(elements);
   window.addEventListener('scroll', function () {
     window.requestParallaxFrame(function () {
       var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
